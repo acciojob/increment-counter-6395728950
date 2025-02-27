@@ -3,14 +3,48 @@
 <html>
 
 <head>
-	<link rel="stylesheet" href="styles.css">
+	<!-- <link rel="stylesheet" href="styles.css"> -->
+	    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #counter {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        button {
+            font-size: 16px;
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+    </style>
+
 </head>
 
 <body>
 	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
+	 <p id="counter">0</p>
+    <button id="incrementBtn">Increment</button>
+	
+    <script >
+		         let counterValue = 0; // Initial counter value
+        const counter = document.getElementById("counter");
+        const button = document.getElementById("incrementBtn");
+
+        button.addEventListener("click", function() {
+            alert("Previous value: " + counterValue); // Show alert before incrementing
+            counterValue++; // Increment counter
+            counter.textContent = counterValue; // Update counter display
+        });
+
 </script>
 
 </body>
+ 
+	 
+	 
 
 </html>
